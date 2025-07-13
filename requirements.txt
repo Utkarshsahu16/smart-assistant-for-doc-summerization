@@ -1,4 +1,5 @@
-streamlit
+flask
+werkzeug
 transformers
 pdfminer.six
 torch

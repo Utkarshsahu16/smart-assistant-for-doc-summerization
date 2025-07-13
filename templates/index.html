@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Assistant for Research Summarization</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📄 Smart Assistant for Research Summarization</h1>
+            <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+        </header>
+        <main>
+            <section id="uploadSection">
+                <label for="fileInput" class="upload-label">Upload PDF or TXT document</label>
+                <input type="file" id="fileInput" accept=".pdf,.txt">
+                <div id="uploadStatus"></div>
+            </section>
+            <section id="summarySection" class="hidden animate-fadein">
+                <h2>🔍 Auto Summary</h2>
+                <div id="summaryContent"></div>
+            </section>
+            <section id="modeSection" class="hidden animate-fadein">
+                <label for="modeSelect">Choose Mode:</label>
+                <select id="modeSelect">
+                    <option value="ask">Ask Anything</option>
+                    <option value="challenge">Challenge Me</option>
+                </select>
+            </section>
+            <section id="askSection" class="hidden animate-fadein">
+                <input type="text" id="questionInput" placeholder="Ask a question...">
+                <button id="askBtn">Ask</button>
+                <div id="answerContent"></div>
+            </section>
+            <section id="challengeSection" class="hidden animate-fadein">
+                <div id="challengeQuestions"></div>
+            </section>
+        </main>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html> 
